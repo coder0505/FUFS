@@ -12,7 +12,8 @@ def loaddata(name):
     info_path = dir + name + '_info.txt'
     f = open(info_path, "r")
     lines = f.readlines()
-    protect_attribute = int(lines[0])
+    protect_attribute = lines[0].split('\t')
+    protect_attribute = [int(i) for i in protect_attribute]
     n_cluster = int(lines[1])
     protect_values = lines[2].split('\t')
     protect_values = [int(i) for i in protect_values]
