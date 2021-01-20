@@ -1,6 +1,6 @@
 import numpy as np
 import torch
-from load_data import load_data
+from load_data import loaddata
 from util import kernel
 import matplotlib.pyplot as plt
 from evaluate import func
@@ -113,7 +113,7 @@ def fufs(data, protect_attribute, **kwargs):
 
 
 if __name__ == '__main__':
-    data, protect_attribute, true_label, n_cluster, protect_value = load_data('toxic')
+    data, protect_attribute, true_label, n_cluster, protect_value = loaddata('toxic')
     d = data.shape[1]
     k = d*0.1 #number of selected features
 
