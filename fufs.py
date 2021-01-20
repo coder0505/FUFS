@@ -114,6 +114,8 @@ def fufs(data, protect_attribute, **kwargs):
 
 if __name__ == '__main__':
     data, protect_attribute, true_label, n_cluster, protect_value = load_data('toxic')
+    d = data.shape[1]
+    k = d*0.1 #number of selected features
 
     m, g = fufs(data, protect_attribute, alpha=0.01, beta=10)
     m = m.detach().numpy()
