@@ -118,4 +118,4 @@ if __name__ == '__main__':
     m, g = fufs(data, protect_attribute, alpha=0.01, beta=10)
     m = m.detach().numpy()
     idx = np.argsort(-m, 0)
-    acc, nmi, bal, prop = func(idx, data, protect_attribute, true_label, n_cluster, protect_value)
+    acc, nmi, bal, prop = func(idx, k, data, protect_attribute, true_label, n_cluster, protect_value)
